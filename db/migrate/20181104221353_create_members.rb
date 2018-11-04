@@ -5,6 +5,7 @@ class CreateMembers < ActiveRecord::Migration[5.2]
       t.string :lastName
       t.integer :payday
       t.string :mail
+      t.date :nextPaymentDate
 
       t.timestamps
     end

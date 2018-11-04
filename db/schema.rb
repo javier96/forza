@@ -17,6 +17,7 @@ ActiveRecord::Schema.define(version: 2018_11_04_222012) do
     t.string "lastName"
     t.integer "payday"
     t.string "mail"
+    t.date "nextPaymentDate"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
