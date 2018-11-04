@@ -10,11 +10,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_11_04_232659) do
+ActiveRecord::Schema.define(version: 2018_11_04_235213) do
 
   create_table "members", force: :cascade do |t|
     t.string "firstName"
     t.string "lastName"
+    t.string "email"
+    t.string "phoneNumber"
     t.integer "paymentDay"
     t.boolean "active"
     t.date "nextPaymentDate"

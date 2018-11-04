@@ -15,10 +15,12 @@ class MembersTest < ApplicationSystemTestCase
     click_on "New Member"
 
     fill_in "Active", with: @member.active
+    fill_in "Email", with: @member.email
     fill_in "Firstname", with: @member.firstName
     fill_in "Lastname", with: @member.lastName
     fill_in "Nextpaymentdate", with: @member.nextPaymentDate
     fill_in "Paymentday", with: @member.paymentDay
+    fill_in "Phonenumber", with: @member.phoneNumber
     click_on "Create Member"
 
     assert_text "Member was successfully created"
@@ -30,10 +32,12 @@ class MembersTest < ApplicationSystemTestCase
     click_on "Edit", match: :first
 
     fill_in "Active", with: @member.active
+    fill_in "Email", with: @member.email
     fill_in "Firstname", with: @member.firstName
     fill_in "Lastname", with: @member.lastName
     fill_in "Nextpaymentdate", with: @member.nextPaymentDate
     fill_in "Paymentday", with: @member.paymentDay
+    fill_in "Phonenumber", with: @member.phoneNumber
     click_on "Update Member"
 
     assert_text "Member was successfully updated"

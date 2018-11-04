@@ -3,6 +3,8 @@
 one:
   firstName: MyString
   lastName: MyString
+  email: MyString
+  phoneNumber: MyString
   paymentDay: 1
   active: false
   nextPaymentDate: 2018-11-04
@@ -10,6 +12,8 @@ one:
 two:
   firstName: MyString
   lastName: MyString
+  email: MyString
+  phoneNumber: MyString
   paymentDay: 1
   active: false
   nextPaymentDate: 2018-11-04
