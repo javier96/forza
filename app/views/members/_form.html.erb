@@ -22,13 +22,18 @@
   </div>
 
   <div class="field">
-    <%= form.label :payday %>
-    <%= form.text_field :payday %>
+    <%= form.label :paymentDay %>
+    <%= form.number_field :paymentDay %>
   </div>
 
   <div class="field">
-    <%= form.label :mail %>
-    <%= form.text_field :mail %>
+    <%= form.label :active %>
+    <%= form.check_box :active %>
+  </div>
+
+  <div class="field">
+    <%= form.label :nextPaymentDate %>
+    <%= form.date_select :nextPaymentDate %>
   </div>
 
   <div class="actions">
