@@ -7,6 +7,17 @@ class MembersController < ApplicationController
     @members = Member.all
   end
 
+  def upcoming_payments
+    @allMembers = Member.all
+    @members = []
+    @allMembers.each do |m|
+      puts Date.today + 14
+      if m.nextPaymentDate <= Date.today + 14
+        @members << m
+      end
+    end
+  end
+
   # GET /members/1
   # GET /members/1.json
   def show
