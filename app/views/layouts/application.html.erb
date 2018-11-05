@@ -9,6 +9,32 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
+
+  <header id = "JammerHeader">
+
+    <div id = "HeaderTitle">
+      <h1>
+        <%=image_tag("forza_logo.jpg")%>
+        Forza
+      </h1>
+      <span id = "slogan">Let's talk 'bout gainz</span>
+    </div>
+
+    <nav id = "HeaderNav">
+      <ul id = "menu">
+        <li id = "tabHome">
+          Inicio
+        </li>
+        <li id = "tabMembers">
+          Miembros
+        </li>
+      </ul>
+    </nav>
+
+  </header>
+
+
+
   <body>
     <%= yield %>
   </body>
