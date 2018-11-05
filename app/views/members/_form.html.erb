@@ -36,14 +36,17 @@
     <%= form.number_field :paymentDay %>
   </div>
 
-  <div class="field">
-    <%= form.label :active %>
-    <%= form.check_box :active %>
+  <div class="switch">
+    <label>
+      Activo
+      <%= form.check_box :active %>
+      <span class="lever"></span>
+    </label>
   </div>
-
+  <br>
   <div class="field">
     <%= form.label :nextPaymentDate %>
-    <%= form.date_select :nextPaymentDate %>
+    <%= form.text_field :nextPaymentDate, class: "datepicker"%>
   </div>
 
   <div class="actions">
