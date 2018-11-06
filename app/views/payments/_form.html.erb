@@ -18,12 +18,12 @@
 
   <div class="field">
     <%= form.label :date %>
-    <%= form.date_select :date %>
+    <%= form.text_field :date, class: "datepicker"%>
   </div>
 
   <div class="field">
-    <%= form.label :member_id_id %>
-    <%= form.text_field :member_id_id %>
+    <%= form.label :member_id%>
+    <%= form.text_field :member_id %>
   </div>
 
   <div class="actions">
