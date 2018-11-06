@@ -13,32 +13,5 @@
  *= require_tree .
  *= require_self
  */
-
-#HeaderTitle{
-    color: white;
-    padding: 10px;
-    background-color: #003300;
-}
-
-#menu{
-  list-style:none;
-  margin: 0;
-  padding: 0;
-  background-color:  #CCCCCC;
-  overflow: hidden;
-}
-
-#menu > li{
-  float:left;
-  padding: 20px;
-}
-
-#menu > li:hover{
-  background-color: #9c9c9c;
-  color: white;
-  cursor: pointer;
-}
-
-#slogan{
-    font-style: italic;
-}
+ @import "materialize";
+ @import "https://fonts.googleapis.com/icon?family=Material\Icons";
