@@ -4,7 +4,13 @@ class MembersController < ApplicationController
   # GET /members
   # GET /members.json
   def index
-    @members = Member.all
+    if params[:query].present?
+      @members = Member.search(params[:query])
+    else
+      @members = Member.all
+    end
+    puts "MEMEBERSDFNSKJNDF"
+    puts @members
   end
 
   def upcoming_payments
@@ -80,6 +86,6 @@ class MembersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def member_params
-      params.require(:member).permit(:firstName, :lastName, :email, :phoneNumber, :paymentDay, :active, :nextPaymentDate)
+      params.require(:member).permit(:firstName, :lastName, :email, :phoneNumber, :paymentDay, :active, :nextPaymentDate, :search)
     end
 end
