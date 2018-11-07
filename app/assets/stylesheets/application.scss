@@ -23,6 +23,14 @@ $main: (
   "base": $color1
 );
  $primary-color: color("green", "base") !default;
+ $primary-color-light: lighten($primary-color, 15%) !default;
+$primary-color-dark: darken($primary-color, 15%) !default;
+$background-color: darken($primary-color, 15%) !default;
+
+ $success-color: color("light-green", "base") !default;
  $secondary-color: color("dark-gray", "base") !default;
  @import "materialize";
+.btn { background-color: $primary_color }
+.lever { background-color: $primary_color }
+
  @import "https://fonts.googleapis.com/icon?family=Material\Icons";
