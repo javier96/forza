@@ -7,6 +7,17 @@ class MembersController < ApplicationController
     @members = Member.all
   end
 
+  def upcoming_payments
+    @allMembers = Member.all
+    @members = []
+    @allMembers.each do |m|
+      puts Date.today + 14
+      if m.nextPaymentDate <= Date.today + 14
+        @members << m
+      end
+    end
+  end
+
   # GET /members/1
   # GET /members/1.json
   def show
@@ -69,6 +80,6 @@ class MembersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def member_params
-      params.require(:member).permit(:firstName, :lastName, :payday, :mail)
+      params.require(:member).permit(:firstName, :lastName, :email, :phoneNumber, :paymentDay, :active, :nextPaymentDate)
     end
 end

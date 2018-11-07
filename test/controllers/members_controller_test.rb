@@ -17,7 +17,7 @@ class MembersControllerTest < ActionDispatch::IntegrationTest
 
   test "should create member" do
     assert_difference('Member.count') do
-      post members_url, params: { member: { firstName: @member.firstName, lastName: @member.lastName, mail: @member.mail, payday: @member.payday } }
+      post members_url, params: { member: { active: @member.active, email: @member.email, firstName: @member.firstName, lastName: @member.lastName, nextPaymentDate: @member.nextPaymentDate, paymentDay: @member.paymentDay, phoneNumber: @member.phoneNumber } }
     end
 
     assert_redirected_to member_url(Member.last)
@@ -34,7 +34,7 @@ class MembersControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update member" do
-    patch member_url(@member), params: { member: { firstName: @member.firstName, lastName: @member.lastName, mail: @member.mail, payday: @member.payday } }
+    patch member_url(@member), params: { member: { active: @member.active, email: @member.email, firstName: @member.firstName, lastName: @member.lastName, nextPaymentDate: @member.nextPaymentDate, paymentDay: @member.paymentDay, phoneNumber: @member.phoneNumber } }
     assert_redirected_to member_url(@member)
   end
 

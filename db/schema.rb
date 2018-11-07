@@ -10,13 +10,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_11_04_222012) do
+ActiveRecord::Schema.define(version: 2018_11_04_242012) do
+
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
 
   create_table "members", force: :cascade do |t|
     t.string "firstName"
     t.string "lastName"
-    t.integer "payday"
-    t.string "mail"
+    t.string "email"
+    t.string "phoneNumber"
+    t.integer "paymentDay"
+    t.boolean "active"
+    t.date "nextPaymentDate"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -24,10 +30,11 @@ ActiveRecord::Schema.define(version: 2018_11_04_222012) do
   create_table "payments", force: :cascade do |t|
     t.float "amount"
     t.date "date"
-    t.integer "member_id_id"
+    t.bigint "member_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["member_id_id"], name: "index_payments_on_member_id_id"
+    t.index ["member_id"], name: "index_payments_on_member_id"
   end
 
+  add_foreign_key "payments", "members"
 end

@@ -11,13 +11,28 @@
 </p>
 
 <p>
-  <strong>Payday:</strong>
-  <%= @member.payday %>
+  <strong>Email:</strong>
+  <%= @member.email %>
 </p>
 
 <p>
-  <strong>Mail:</strong>
-  <%= @member.mail %>
+  <strong>Phonenumber:</strong>
+  <%= @member.phoneNumber %>
+</p>
+
+<p>
+  <strong>Paymentday:</strong>
+  <%= @member.paymentDay %>
+</p>
+
+<p>
+  <strong>Active:</strong>
+  <%= @member.active %>
+</p>
+
+<p>
+  <strong>Nextpaymentdate:</strong>
+  <%= @member.nextPaymentDate %>
 </p>
 
 <%= link_to 'Edit', edit_member_path(@member) %> |

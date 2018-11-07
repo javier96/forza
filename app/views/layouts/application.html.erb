@@ -1,13 +1,27 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Forza</title>
+        <link rel = "stylesheet"
+           href = "https://fonts.googleapis.com/icon?family=Material+Icons">
+          <title>Forza</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
+
+
+  <nav>
+      <div class="nav-wrapper">
+        <%= link_to image_tag("forza_logo.jpg", alt: "logo", style: "height:100%"), '/', class: 'navbar-brand' %>
+        <ul id="nav-mobile" class="right">
+          <li> <%= link_to "Miembros", members_path %> </li>
+          <li> <%= link_to "Pagos", payments_path %> </li>
+        </ul>
+      </div>
+    </nav>
+
 
   <body>
     <%= yield %>

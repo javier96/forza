@@ -22,16 +22,34 @@
   </div>
 
   <div class="field">
-    <%= form.label :payday %>
-    <%= form.text_field :payday %>
+    <%= form.label :email %>
+    <%= form.text_field :email %>
   </div>
 
   <div class="field">
-    <%= form.label :mail %>
-    <%= form.text_field :mail %>
+    <%= form.label :phoneNumber %>
+    <%= form.text_field :phoneNumber %>
   </div>
 
-  <div class="actions">
+  <div class="field">
+    <%= form.label :paymentDay %>
+    <%= form.number_field :paymentDay %>
+  </div>
+
+  <div class="switch">
+    <label>
+      Activo
+      <%= form.check_box :active %>
+      <span class="lever"></span>
+    </label>
+  </div>
+  <br>
+  <div class="field">
+    <%= form.label :nextPaymentDate %>
+    <%= form.text_field :nextPaymentDate, class: "datepicker"%>
+  </div>
+
+  <div class="actions waves-effect waves-light btn">
     <%= form.submit %>
   </div>
 <% end %>

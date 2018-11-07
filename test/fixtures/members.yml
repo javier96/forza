@@ -3,11 +3,17 @@
 one:
   firstName: MyString
   lastName: MyString
-  payday: 
-  mail: MyString
+  email: MyString
+  phoneNumber: MyString
+  paymentDay: 1
+  active: false
+  nextPaymentDate: 2018-11-04
 
 two:
   firstName: MyString
   lastName: MyString
-  payday: 
-  mail: MyString
+  email: MyString
+  phoneNumber: MyString
+  paymentDay: 1
+  active: false
+  nextPaymentDate: 2018-11-04
