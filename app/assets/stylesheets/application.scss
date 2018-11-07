@@ -13,5 +13,16 @@
  *= require_tree .
  *= require_self
  */
+ @import "materialize/components/color-variables";
+ $color1: rgba(0, 158, 13, 1);
+$color2: rgba(4, 15, 15, 1);
+$color3: rgba(43, 168, 74, 1);
+$color4: rgba(45, 58, 58, 1);
+$color5: rgba(252, 255, 252, 1);
+$main: (
+  "base": $color1
+);
+ $primary-color: color("green", "base") !default;
+ $secondary-color: color("dark-gray", "base") !default;
  @import "materialize";
  @import "https://fonts.googleapis.com/icon?family=Material\Icons";
