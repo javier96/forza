@@ -9,8 +9,14 @@ class MembersController < ApplicationController
     else
       @members = Member.all
     end
-    puts "MEMEBERSDFNSKJNDF"
-    puts @members
+  end
+
+  def innactive
+    @members = @members.select{ |member| member.active }
+    render(
+      partial: 'list',
+      locals: { members: @members }
+    )
   end
 
   def upcoming_payments

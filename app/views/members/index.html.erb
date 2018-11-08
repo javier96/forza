@@ -1,13 +1,15 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Members</h1>
+<h1>Miembros</h1>
 <%= form_tag(members_path, :method => "get", id: "search-form") do %>
 <%= text_field_tag :query, params[:query], placeholder: "Buscar nombre" %>
-<%= submit_tag "Search", class: "actions waves-effect waves-light btn" %>
+<%= submit_tag "Buscar", class: "actions waves-effect waves-light btn" %>
 <% end %>
+<br>
+<div>
+<%= button_to 'Agregar miembro', new_member_path, method: :get, class: "actions waves-effect waves-light btn right" %>
+</div>
 <%= render(
   partial: 'list',
   locals: { members: @members }
 ) %>
-
-<%= link_to 'New Member', new_member_path %>
