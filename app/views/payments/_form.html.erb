@@ -21,10 +21,10 @@
     <%= form.text_field :date, class: "datepicker", value: Date.today%>
   </div>
 
-  <div class="field">
-    <%= form.label :member_id%>
-    <%= form.text_field :member_id %>
-  </div>
+  <div  style="display:none;">
+  <%= form.text_field :member_id, as: :hidden, value: params[:member_id] %>
+</div>
+
 
   <div>
     <%= form.submit 'Guardar', class: "actions waves-effect waves-light btn" %>
