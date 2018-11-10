@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  get 'pages/home'
+  get 'pages/login'
+  resources :pages
   resources :payments
   resources :search, only: [:index]
   resources :members do
