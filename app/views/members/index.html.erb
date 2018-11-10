@@ -1,39 +1,15 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Members</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Firstname</th>
-      <th>Lastname</th>
-      <th>Email</th>
-      <th>Phonenumber</th>
-      <th>Paymentday</th>
-      <th>Active</th>
-      <th>Nextpaymentdate</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @members.each do |member| %>
-      <tr>
-        <td><%= member.firstName %></td>
-        <td><%= member.lastName %></td>
-        <td><%= member.email %></td>
-        <td><%= member.phoneNumber %></td>
-        <td><%= member.paymentDay %></td>
-        <td><%= member.active %></td>
-        <td><%= member.nextPaymentDate %></td>
-        <td><%= link_to 'Show', member %></td>
-        <td><%= link_to 'Edit', edit_member_path(member) %></td>
-        <td><%= link_to 'Destroy', member, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
+<h1>Miembros</h1>
+<%= form_tag(members_path, :method => "get", id: "search-form") do %>
+<%= text_field_tag :query, params[:query], placeholder: "Buscar nombre" %>
+<%= submit_tag "Buscar", class: "actions waves-effect waves-light btn" %>
+<% end %>
 <br>
-
-<%= link_to 'New Member', new_member_path %>
+<div>
+<%= button_to 'Agregar miembro', new_member_path, method: :get, class: "actions waves-effect waves-light btn right" %>
+</div>
+<%= render(
+  partial: 'list',
+  locals: { members: @members }
+) %>

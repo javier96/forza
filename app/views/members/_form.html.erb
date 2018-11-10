@@ -14,7 +14,7 @@
   <div class="field">
     <%= form.label :firstName %>
     <%= form.text_field :firstName %>
-  </div>
+   </div>
 
   <div class="field">
     <%= form.label :lastName %>
@@ -33,20 +33,20 @@
 
   <div class="field">
     <%= form.label :paymentDay %>
-    <%= form.number_field :paymentDay %>
+    <%= form.number_field :paymentDay, value: Date.today.day %>
   </div>
 
   <div class="switch">
     <label>
       Activo
-      <%= form.check_box :active %>
+      <%= form.check_box :active, checked: "checked" %>
       <span class="lever"></span>
     </label>
   </div>
   <br>
   <div class="field">
     <%= form.label :nextPaymentDate %>
-    <%= form.text_field :nextPaymentDate, class: "datepicker"%>
+    <%= form.text_field :nextPaymentDate, class: "datepicker", value: Date.today.next_month%>
   </div>
 
   <div class="actions waves-effect waves-light btn">

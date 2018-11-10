@@ -28,6 +28,8 @@ class PaymentsController < ApplicationController
 
     respond_to do |format|
       if @payment.save
+        @member = Member.find(payment_params[:member_id])
+        @member.update(nextPaymentDate: @payment.date + 1.month)
         format.html { redirect_to @payment, notice: 'Payment was successfully created.' }
         format.json { render :show, status: :created, location: @payment }
       else
