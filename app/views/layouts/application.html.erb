@@ -18,9 +18,13 @@
         <ul id="nav-mobile" class="right">
           <li> <%= link_to "Miembros", members_path %> </li>
           <li> <%= link_to "Pagos", payments_path %> </li>
+          <li> <%= link_to "Pendientes", upcoming_payments_path %> </li>
+
         </ul>
       </div>
     </nav>
+    <%= notice %>
+<%= alert %>
 
 
   <body>
