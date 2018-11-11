@@ -15,7 +15,7 @@
 </p>
 
 <p>
-  <strong>Día de pago:</strong>
+  <strong>Fecha de corte:</strong>
   <%= @member.paymentDay %>
 </p>
 
@@ -28,6 +28,9 @@
   <strong>Día siguiente de pago:</strong>
   <%= @member.nextPaymentDate %>
 </p>
+
+<%= link_to 'Editar', edit_member_path(@member) %> |
+<%= link_to 'Atrás', members_path %>
 
 <table>
   <thead>
