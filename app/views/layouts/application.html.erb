@@ -12,14 +12,19 @@
   </head>
 
 
+
   <nav>
       <div class="nav-wrapper">
         <%= link_to image_tag("forza_logo.jpg", alt: "logo", style: "height:100%"), '/', class: 'navbar-brand' %>
         <ul id="nav-mobile" class="right">
-          <li> <%= link_to "Miembros", members_path %> </li>
-          <li> <%= link_to "Pagos", payments_path %> </li>
-          <li> <%= link_to "Pendientes", upcoming_payments_path %> </li>
-
+          <% if session[:current_user] == 'FORZA' %>
+            <li> <%= link_to "Miembros", members_path %> </li>
+            <li> <%= link_to "Pagos", payments_path %> </li>
+            <li> <%= link_to "Pendientes", upcoming_payments_path %> </li>
+          <% else %>
+            <li> <%= link_to "Nosotros", pages_home_path %> </li>
+            <li> <%= link_to "Acceso", pages_login_path %> </li>
+          <%end %>
         </ul>
       </div>
     </nav>

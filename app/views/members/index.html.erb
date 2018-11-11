@@ -1,35 +1,4 @@
 <p id="notice"><%= notice %></p>
-
-<h4>Sobre nosotros</h4>
-Somos un gimnasio de calistenia abierto para todo el público. 
-
-<h5>Nos especializamos en ayudarte a alcanzar y exceder tus metas</h5>
-Contamos con excelentes coaches que le proveen a nuestros miembros una rutina especializada. Adicionalmente, nuestra nutrióloga le ofrece consejos a nuestros miembros para que vivan y entrenen sanamente.
-
-<h5>Contacto</h5>
-Whatsapp: 01 81 2511 9160
-<br>
-Facebook: /forzagravitygym
-
-<h5>Horarios</h5>
-lunes     6:00-10:00, 16:00-22:00
-<br>
-martes    6:00-10:00, 16:00-22:00
-<br>
-miércoles 6:00-10:00, 16:00-22:00
-<br>
-jueves    6:00-10:00, 16:00-22:00
-<br>
-viernes   6:00-10:00, 16:00-22:00
-<br>
-sábado    10:00-14:00
-<br>
-domingo   Cerrado
-
-<h5>Ubicación</h5>
-Lázaro Cárdenas 4328-A (5,87 km)
-64930 Monterrey
-
 <h1>Miembros</h1>
 <%= form_tag(members_path, :method => "get", id: "search-form") do %>
 <%= text_field_tag :query, params[:query], placeholder: "Buscar nombre" %>
