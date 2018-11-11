@@ -7,8 +7,8 @@ class PagesController < ApplicationController
     params.inspect
     user = params[:pages][:email]
     password = params[:pages][:password]
-    if user == "f@f.f" && password == "Forza123"
-      session[:admin] = true
+    if user == "f@f.f" && password == "123"
+      session[:current_user] = "FORZA"
       redirect_to controller: 'members', action: 'upcoming_payments'
       return
     end
