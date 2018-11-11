@@ -1,9 +1,13 @@
 class MembersController < ApplicationController
+  before_action :login_required, only: [:index, :edit, :update, :destroy]
+  # GET /members
   before_action :set_member, only: [:show, :edit, :update, :destroy]
-
   # GET /members
   # GET /members.json
   def index
+    puts "SESSSSSSSSIOOOOOOOOOON"
+    puts session[:admin]
+    puts session[:current_user]
     if params[:query].present?
       @members = Member.search(params[:query])
     else
@@ -88,6 +92,7 @@ class MembersController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_member
+      session.inspect
       @member = Member.find(params[:id])
     end
 
