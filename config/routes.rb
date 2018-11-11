@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   get 'pages/home'
   get 'pages/login'
   get 'pages/authen', to: "pages#authen"
+  get 'pages/logout', to: "pages#logout"
   resources :payments
   resources :search, only: [:index]
   resources :members do

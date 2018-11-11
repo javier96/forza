@@ -2,6 +2,11 @@ class PagesController < ApplicationController
   def home
   end
 
+  def logout
+    session[:current_user] = ""
+    redirect_to controller: "pages", action: "home"
+  end
+
   def authen
     puts "ADASDASDASDASDASDA"
     params.inspect
