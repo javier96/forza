@@ -6,7 +6,7 @@
       <th>Apellidos</th>
       <th>Email</th>
       <th>Telefono</th>
-      <th>Dia de pago</th>
+      <th>Fecha de corte</th>
       <th>Status</th>
       <th>Siguiente pago</th>
       <th colspan="3"></th>
@@ -29,7 +29,7 @@
         <td><%= link_to 'Registrar pago', "members/#{member.id}/payments/new" %></td>
         <td><%= link_to 'Perfil', member %></td>
         <td><%= link_to 'Editar', edit_member_path(member) %></td>
-        <td><%= link_to 'Eliminar', member, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Eliminar', member, method: :delete, data: { confirm: '¿Desea continuar?' } %></td>
       </tr>
     <% end %>
   </tbody>

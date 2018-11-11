@@ -19,7 +19,7 @@
         <td><%= payment.date %></td>
         <td><%= "#{Member.find(payment.member_id).firstName} #{Member.find(payment.member_id).lastName }" %></td>
         <td><%= link_to 'Editar', "members/#{payment.member_id}/payments/#{payment.id}/edit" %></td>
-        <td><%= link_to 'Eliminar', payment, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Eliminar', payment, method: :delete, data: { confirm: '¿Desea continuar?' } %></td>
       </tr>
     <% end %>
   </tbody>
