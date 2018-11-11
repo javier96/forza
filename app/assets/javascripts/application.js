@@ -22,12 +22,22 @@ document.addEventListener('DOMContentLoaded', function() {
   var instances = M.Datepicker.init(elems, options);
 });
 
+
+
 // Or with jQuery
 
-$(document).ready(function(){
+document.addEventListener("turbolinks:load", function() {
   $('.datepicker').datepicker();
+  $('.carousel').carousel();
+
+  $('.carousel.carousel-slider').carousel({
+    fullWidth: true,
+    indicators: true
+  });
+
+  $("#query-btn").on('click', function() {
+    
+  });
 });
 
-$("#query-btn").on('click', function() {
-  
-});
+
