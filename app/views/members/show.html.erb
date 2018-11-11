@@ -1,43 +1,33 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Firstname:</strong>
-  <%= @member.firstName %>
-</p>
+<h5 class = "collection-item">
+  <%= @member.firstName %> <%= @member.lastName %>
+</h5>
 
 <p>
-  <strong>Lastname:</strong>
-  <%= @member.lastName %>
-</p>
-
-<p>
-  <strong>Email:</strong>
+  <strong>Correo:</strong>
   <%= @member.email %>
 </p>
 
 <p>
-  <strong>Phonenumber:</strong>
+  <strong>Teléfono:</strong>
   <%= @member.phoneNumber %>
 </p>
 
 <p>
-  <strong>Paymentday:</strong>
+  <strong>Día de pago:</strong>
   <%= @member.paymentDay %>
 </p>
 
 <p>
-  <strong>Active:</strong>
-  <%= @member.active %>
+  <%= 'Activo' if @member.active %>
+  <%= 'Inactivo' if !@member.active %>
 </p>
 
 <p>
-  <strong>Nextpaymentdate:</strong>
+  <strong>Día siguiente de pago:</strong>
   <%= @member.nextPaymentDate %>
 </p>
-
-<%= link_to 'Edit', edit_member_path(@member) %> |
-<%= link_to 'Back', members_path %>
-
 
 <table>
   <thead>
@@ -53,8 +43,8 @@
       <tr>
         <td><%= payment.amount %></td>
         <td><%= payment.date %></td>
-        <td><%= link_to 'Edit', edit_payment_path(payment) %></td>
-        <td><%= link_to 'Destroy', payment, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Editar', edit_payment_path(payment) %></td>
+        <td><%= link_to 'Eliminar', payment, method: :delete, data: { confirm: '¿Desea continuar?' } %></td>
       </tr>
     <% end %>
   </tbody>

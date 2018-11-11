@@ -1,5 +1,4 @@
 <p id="notice"><%= notice %></p>
-
 <h1>Miembros</h1>
 <%= form_tag(members_path, :method => "get", id: "search-form") do %>
 <%= text_field_tag :query, params[:query], placeholder: "Buscar nombre" %>

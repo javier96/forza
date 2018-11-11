@@ -1,4 +1,5 @@
 class PaymentsController < ApplicationController
+  before_action :login_required, only: [:show, :index, :edit, :update, :destroy]
   before_action :set_payment, only: [:show, :edit, :update, :destroy]
 
   # GET /payments

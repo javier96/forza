@@ -18,7 +18,7 @@
         <td><%= payment.amount %></td>
         <td><%= payment.date %></td>
         <td><%= "#{Member.find(payment.member_id).firstName} #{Member.find(payment.member_id).lastName }" %></td>
-        <td><%= link_to 'Editar', edit_payment_path(payment) %></td>
+        <td><%= link_to 'Editar', "members/#{payment.member_id}/payments/#{payment.id}/edit" %></td>
         <td><%= link_to 'Eliminar', payment, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
@@ -26,5 +26,3 @@
 </table>
 
 <br>
-
-<%= link_to 'New Payment', new_payment_path %>
