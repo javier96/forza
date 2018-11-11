@@ -12,27 +12,27 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :firstName %>
+    <%= form.label :firstName, 'Nombre' %>
     <%= form.text_field :firstName %>
    </div>
 
   <div class="field">
-    <%= form.label :lastName %>
+    <%= form.label :lastName, 'Apellido' %>
     <%= form.text_field :lastName %>
   </div>
 
   <div class="field">
-    <%= form.label :email %>
+    <%= form.label :email, 'Correo' %>
     <%= form.text_field :email %>
   </div>
 
   <div class="field">
-    <%= form.label :phoneNumber %>
+    <%= form.label :phoneNumber, 'Teléfono' %>
     <%= form.text_field :phoneNumber %>
   </div>
 
   <div class="field">
-    <%= form.label :paymentDay %>
+    <%= form.label :paymentDay, 'Fecha de corte' %>
     <%= form.number_field :paymentDay, value: Date.today.day %>
   </div>
 
@@ -45,11 +45,11 @@
   </div>
   <br>
   <div class="field">
-    <%= form.label :nextPaymentDate %>
+    <%= form.label :nextPaymentDate, 'Día siguiente de pago' %>
     <%= form.text_field :nextPaymentDate, class: "datepicker", value: Date.today.next_month%>
   </div>
 
   <div class="actions waves-effect waves-light btn">
-    <%= form.submit %>
+    <%= form.submit 'Guardar' %>
   </div>
 <% end %>
