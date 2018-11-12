@@ -31,7 +31,7 @@ class PaymentsController < ApplicationController
       if @payment.save
         @member = Member.find(payment_params[:member_id])
         @member.update(nextPaymentDate: @payment.date + 1.month)
-        format.html { redirect_to @payment, notice: 'Pago exitosamente creado.' }
+        format.html { redirect_to payments_url, notice: 'Pago exitosamente creado.' }
         format.json { render :show, status: :created, location: @payment }
       else
         format.html { render :new }
@@ -45,7 +45,7 @@ class PaymentsController < ApplicationController
   def update
     respond_to do |format|
       if @payment.update(payment_params)
-        format.html { redirect_to @payment, notice: 'Pago exitosamente editado.' }
+        format.html { redirect_to payments_url, notice: 'Pago exitosamente editado.' }
         format.json { render :show, status: :ok, location: @payment }
       else
         format.html { render :edit }
