@@ -28,10 +28,10 @@
   <strong>Día siguiente de pago:</strong>
   <%= @member.nextPaymentDate %>
 </p>
-
+<% if session[:current_user] == "FORZA" %>
 <%= link_to 'Editar', edit_member_path(@member) %> |
 <%= link_to 'Atrás', members_path %>
-
+<% end %>
 <table>
   <thead>
     <tr>
